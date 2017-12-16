@@ -1,0 +1,55 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  padding: 0;
+  margin: 0;
+}
+header{
+  text-align: center;
+}
+#contal{
+  float: right;
+}
+.clear{
+  clear: both;
+}
+
+#contal a{
+  list-style: none;
+  color: #0f0f0f;
+  text-decoration: none;
+}
+.formedit{
+  width: 500px;
+}
+.icons{
+  position: absolute;
+  left: 35px;
+  top:5px;
+}
+#top{
+  padding: 0;
+  margin: 0;
+  width: 14px;
+  height: 14px;
+  display: block;
+  position: relative;
+  /*right: -30px;*/
+  /*top: -20px;*/
+
+}
+#bottom{
+  padding: 0;
+  margin: 0;
+  width: 14px;
+  height: 14px;
+  /*display: block;*/
+  position: relative;
+  /*font-weight: normal;*/
+  /*left: 30px;*/
+  /*top: -20px;*/
+}
+.formbox{
+
+}

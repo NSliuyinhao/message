@@ -1,0 +1,47 @@
+<% include header %>
+    <div class="main">
+       <table class="table table-bordered table-hover">
+           <tbody>
+               <tr>
+                   <th>用户名</th>
+                   <th style="position: relative">姓名
+                       <!--<div class="icons">-->
+                       <!--<span class="glyphicon glyphicon-triangle-top" id="top"></span>-->
+                       <!--<span class="glyphicon glyphicon-triangle-bottom" id="bottom"></span></div>-->
+                   </th>
+                   <th>性别</th>
+                   <th>年龄</th>
+                   <th>手机</th>
+                   <th>邮箱</th>
+                   <th>注册时间</th>
+                   <th>操作</th>
+               </tr>
+           <% docs.forEach(function (doc) {  %>
+               <tr>
+                   <td><%= doc.username%></td>
+                   <td><%= doc.name%></td>
+                   <td><%= doc.sex%></td>
+                   <td><%= doc.age%></td>
+                   <td><%= doc.tel%></td>
+                   <td><%= doc.email%></td>
+                   <td><%= doc.time%></td>
+                   <td><span><a href="/delet/<%= doc.time%>">删除</a></span>
+                       <span><a href="/edit/<%= doc.time%>">修改</a></span>
+                   </td>
+               </tr>
+           <% }) %>
+           </tbody>
+       </table>
+        <div>
+            <% if(!isFirstPage){ %>
+            <span class="prepage">
+        <a href="?page=<%= page - 1 %>">上一页</a>
+    </span>
+            <% } %>
+            <% if(!isLastPage){ %>
+            <span class="nextpage">
+        <a href="?page=<%= page + 1%>">下一页</a>
+    </span>
+            <% } %>
+        </div>
+<% include footer %>
